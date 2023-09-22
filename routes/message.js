@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
 
 // POST message
 router.post('/', async function(req, res, next){
-  return await createCompletion(req, res);
+  const result = await createCompletion(req.body.input);
+  res.status(200).json({ result: result});
 });
 
 export default router;
