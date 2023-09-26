@@ -13,6 +13,7 @@ async function createCompletion(input) {
             model: "gpt-3.5-turbo-instruct",
             prompt: input,
             temperature: 0.6,
+            max_tokens: 100,
         });
 
         console.log('completion.data.choices[0].text', completion.data.choices[0].text);
